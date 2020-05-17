@@ -1,0 +1,1 @@
+# aws-fargate-hapi-rest-sample
