@@ -1,0 +1,33 @@
+{
+  "name": "my-funky-restapi",
+  "version": "0.0.0",
+  "description": "A sample REST API stack using hapijs and es6 support",
+  "main": "./lib/app.js",
+  "author": "Soumik Mukherjee <me@soumikmukherjee.dev>",
+  "license": "Apache-2.0",
+  "private": true,
+  "dependencies": {
+    "@hapi/boom": "^9.1.0",
+    "@hapi/hapi": "^19.1.1",
+    "@hapi/hoek": "^9.0.4",
+    "dotenv": "^8.2.0"
+  },
+  "scripts": {
+    "start": "export CREDENTIALS=\"/home/node/app/key.json\" && node ./lib/app.js",
+    "clean": "rm -rf ./lib/",
+    "build": "babel src --out-dir lib",
+    "dev:build": "babel src --out-dir lib --source-maps",
+    "dev:run": "yarn start",
+    "dev:debug": "node --nolazy --inspect-brk=9229 ./lib/app.js ",
+    "prebuild": "yarn clean",
+    "predev:build": "yarn clean",
+    "predev:debug": "yarn dev:build",
+    "encrypt:env-files": ""
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "babel-loader": "^8.1.0"
+  }
+}

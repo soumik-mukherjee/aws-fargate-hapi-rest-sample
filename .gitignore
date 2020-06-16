@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Extending Github's default gitignore for node projects
+lib
+.yarnrc
+.env
+key.json
